@@ -58,8 +58,8 @@ movies = pd.DataFrame(movie_dict)                                  # making a da
 
 similarity = pickle.load(open('similarity.pkl', 'rb'))
 
-selected_movie_name = st.selectbox(
-    'Please select a movie from drop-down list',movies['title'].values
+selected_movie_name = st.selectbox(                                                     # selectbox is used for taking the movie name as an input from user
+    'Please select a movie from drop-down list',movies['title'].values      # a drop down list of movie names appear which uses 'String search algorithm' that uses text matching 
 )
 
 if st.button('Recommendation'):                                     # getting recommendation of movies along with posters
